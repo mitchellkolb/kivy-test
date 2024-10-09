@@ -1,15 +1,23 @@
 
 
-# main.py
-from kivy.app import App
-from kivy.uix.widget import Widget
+# # main.py
+# from kivy.app import App
+# from kivy.uix.widget import Widget
 
-class MainWidget(Widget):
+# class MainWidget(Widget):
+#     pass
+
+# class MyApp(App):
+#     def build(self):
+#         return MainWidget()
+
+# if __name__ == "__main__":
+#     MyApp().run()
+
+
+from kivy.app import App
+
+class TheLabApp(App):
     pass
 
-class MyApp(App):
-    def build(self):
-        return MainWidget()
-
-if __name__ == "__main__":
-    MyApp().run()
+TheLabApp().run()
