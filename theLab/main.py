@@ -14,15 +14,19 @@
 # TheLabApp().run()
 
 from kivy.app import App
-from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.uix.button import Button
 
-class TheLab(BoxLayout):
-    def say_hello(self):
-        print("hello")
-
-class TheLabApp(App):
+class MyScreenApp(App):
     def build(self):
-        return TheLab()
-
-if __name__ == "__main__":
-    TheLabApp().run()
+        sm = ScreenManager()
+        
+        # Create a Screen w/1 button and add it
+        main = Screen(name='main')
+        main.add_widget(Button(text='main'))
+        sm.add_widget(main)
+        
+        return sm
+        
+if __name__ == '__main__':
+    MyScreenApp().run()

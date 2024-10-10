@@ -1,8 +1,23 @@
-MainWidget:
+<MenuScreen>:
+	Button:
+		text:"Main"
+		on_press:root.manager.current='main'
 
-<TheLab>:
-    Button:
-        text: "Click Me"
-        on_press: root.say_hello()
+<MainScreen>:
+	Button:
+		text:"Menu"
+		on_press:root.manager.current='menu'
 
-
+myScreenManager:
+	id: screen_manager
+	menu_screen: menu_screen
+	main_screen: menu_screen
+	
+	MenuScreen:
+		id: menu_screen
+		name: 'menu'
+		manager: screen_manager
+	MainScreen:
+		id: main_screen
+		name: 'main'
+		manager: screen_manager
