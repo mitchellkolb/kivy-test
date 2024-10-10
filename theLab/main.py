@@ -19,6 +19,7 @@
 # if __name__ == '__main__':
 #     MyScreenApp().run()
 
+#https://kivy.org/doc/stable/tutorials/pong.html
 from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.properties import NumericProperty, ReferenceListProperty
