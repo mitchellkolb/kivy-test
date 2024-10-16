@@ -1,3 +1,9 @@
+
+<Button>:
+    background_color: 0.96, 0.9, 0.65, 0.75
+    
+
+
 <MyBoxLayout>:
     orientation: 'vertical'
     spacing: 20
@@ -13,3 +19,11 @@
         id: TextInput
         size_hint_y: None
         front_size: 100
+
+    Button:
+        text: "Submit"
+        height: 100
+        size_hint_y: None
+        size_hint_x: 1
+        front_size: 32
+        on_release: root.OnSubmit()
